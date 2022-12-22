@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <h1 class="info">Tableau des utilisateurs</h1>
+
+        <h2 style="color:red;">{{ error }}</h2>
+        
+        
+        <h5>statut connexion database : {{ dbOK__ }}</h5>
+        <table class="table">
+            <thead>
+                <tr class="titre">
+                    <th scope="col">ID</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Adresse email</th>
+                </tr>
+            </thead>
+                <tbody>
+                    {{ HTML_Result }}
+                    {% for personne in HTML_Result %}
+
+                        <!-- <p> {{ personne.id }}</p> -->
+                        <tr>
+                            <th scope="row">{{ personne[0] }}</th>
+                            <td id="first_user">{{ personne[1] }}</td>
+                            <td id="second_user">{{ personne[2] }}</td>
+                            <td>{{ personne[3] }}</td>
+                        </tr>
+
+                    {% endfor %}
+                </tbody>
+        </table>
+
+        <h1 class="info">Formulaire d'ajout d'utilisateur </h1>
+
+
+        <form action="" method="post">
+            <div class="mb-3">
+                <label for="prenom" class="form-label">Prenom</label>
+                <input type="text" class="form-control" id="prenom" placeholder="votre prenom" name="prenom" value="">
+            </div>
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom" placeholder="votre nom" name="nom" value="">
+            </div>
+            <div class="mb-3">
+                <label for="adresse_mail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="adresse_mail" placeholder="votre_email@example.com" name="adresse_mail" value="">
+            </div>
+
+            <button type="submit" class="btn btn-success" value="">Valider</button>
+        </form>
+
+
+    
+{% endblock %}

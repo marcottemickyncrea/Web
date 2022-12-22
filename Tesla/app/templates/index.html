@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<table>
+    <thead>
+        <tr>
+            <td>
+                Modèle
+            </td>
+            <td>
+                Vitesse
+            </td>
+            <td>
+                Caractéristique 1
+            </td>
+            <td>
+                Caractristique 2
+            </td>
+            <td>
+                Nombre de chevaux
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for voiture in voitures %}
+        <tr>
+            <td>
+                {{voiture[0]}}
+            </td>
+            <td>
+                {{voiture[1]}}
+            </td>
+            <td>
+                {{voiture[2]}}
+            </td>
+            <td>
+                {{voiture[3]}}
+            </td>
+            <td>
+                {{voiture[4]}}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>    
+</table>
+
+{% endblock %}

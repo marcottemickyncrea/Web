@@ -1,0 +1,46 @@
+{% block nav %}
+{% for icon in [
+{
+'src': "https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg",
+'nom': 'Bord de mer'
+},
+{
+'src': "https://a0.muscache.com/pictures/35919456-df89-4024-ad50-5fcb7a472df9.jpg",
+'nom': 'Tiny House'
+},
+{
+'src':"https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg",
+'nom': 'Avec vue'
+},
+{
+'src':"https://a0.muscache.com/pictures/89faf9ae-bbbc-4bc4-aecd-cc15bf36cbca.jpg",
+'nom': 'Dômes'
+},
+{
+'src': "https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg",
+'nom': 'Grandes demeures'
+},
+{
+'src': "https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg",
+'nom': 'Piscines'
+},
+{
+'src':"https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg",
+'nom': 'Wow'
+},
+{
+'src':"https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg",
+'nom': 'Luxe'
+}, 
+{
+'src':"https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg",
+'nom': 'Cabanes Perchées'
+}
+]
+%}
+<li>
+    <img src={{icon.src}} alt="">
+    <p>{{icon.nom}}</p>
+</li>
+{% endfor %}
+{% endblock %}

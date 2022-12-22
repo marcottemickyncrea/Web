@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for article in articles %}
+<div class="container-location">
+    <h1>{{ article[0] }}</h1>
+    <P>{{ article[1] }}</P>
+    <p>{{ article[2] }}</p>
+</div>
+{% endfor %}
+{% endblock %}
