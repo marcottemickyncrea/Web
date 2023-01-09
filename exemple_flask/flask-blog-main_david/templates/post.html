@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="post">
+
+        <h2>{% block title %} {{ post['title'] }} {% endblock %}</h2>
+
+        <span class="badge badge-primary">{{ post['created'] }}</span>
+
+        <div class="content">
+            <p>{{ post['content'] }}</p>
+        </div>
+        
+    </div>
+{% endblock %}
